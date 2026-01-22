@@ -1,0 +1,114 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style13 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Prediction Of Flight Trajectory Status Details  !!! </p>
+                            <hr>
+						    <div class="tweettext">
+                              <table border="5" bordercolor="#FF0000">
+                                <tr>
+                                  <td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Fid</strong></em></span></div></td>
+                                <td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Airline</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Flight</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>DateTime</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lat</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lon</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Geoaltitude</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lat2</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lon2</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Geoaltitude2</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lat3</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lon3</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Geoaltitude3</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lat4</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lon4</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Geoaltitude4</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lat5</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Lon5</strong></em></span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Geoaltitude5</strong></em></span></div></td>
+								   <td bgcolor="#FF0000"><div align="center" class="style6 style13"><span class="style8"><em><strong>Prediction</strong></em></span></div></td>
+                                </tr>
+                                {% for object in list_objects %}
+                                <tr>
+                                  <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Fid}}</div></td>
+                                 <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Airline}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Flight}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.DateTime}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lat}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lon}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Geoaltitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lat2}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lon2}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Geoaltitude2}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lat3}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lon3}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Geoaltitude3}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lat4}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lon4}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Geoaltitude4}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lat5}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Lon5}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Geoaltitude5}}</div></td>
+								  <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="left">{{object.Prediction}}</div></td>
+                                </tr>
+                                {% endfor %}
+                              </table>
+				        </div>
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
+	
+	
+	
+	
+	
